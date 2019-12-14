@@ -35,8 +35,8 @@ for i in range(len(df)):
     music_title = document['music_title'][i]
     lyric = document['lyric'][i]
     #print(music_id,'\n',music_title,'\n',lyric)
-    if (i+1)%5==0:
-        time.sleep(1)
+    if (i+1)%20==0:
+        time.sleep(1)  #免费用户QPS不大于20，超额会报错
     if lyric =='\n':
         lyric = 'NA'
     params = {'text':lyric}
